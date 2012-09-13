@@ -1,3 +1,4 @@
+import os
 from flask import Flask # Retrieve Flask, our framework
 app = Flask(__name__)   # create our flask app
 
@@ -18,4 +19,6 @@ def page2():
 # start the webserver
 if __name__ == "__main__":
 	app.debug = True
-	app.run()
+	
+	port = int(os.environ.get('PORT', 5000)) # locally PORT 5000, Heroku will assign its own port
+	app.run(host='0.0.0.0', port=port)
