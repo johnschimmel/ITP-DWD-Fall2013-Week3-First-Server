@@ -82,8 +82,6 @@ The **Procfile** will be pushed to Heroku, it tells Heroku where are main web se
 
 
 
-
-
 ----------
 
 ### Getting Going with GIT
@@ -124,5 +122,35 @@ To create a snapshot in time of your code, run the following command,
 	git commit -am "This is my update, I added some files."
 
 
+----------
 
-* Push to Heroku
+### Push to Heroku
+
+With your code committed you're ready to use Heroku
+
+#### Verify you are logged into Heroku
+
+	heroku login
+
+Log in with your email and password used when registering at [https://api.heroku.com/signup](https://api.heroku.com/signup)
+
+
+#### Create a new Heroku app
+
+	heroku create
+
+Heroku will respond with a crazy looking domain name. Heroku also added a new GIT remote path to you Heroku repository. Look at your GIT remote paths run the command, 
+
+	git remote -v
+
+#### Push your code to Heroku
+
+Ready? Deploy your new server on Heroku by **push**ing your code to Heroku. This is uploading all code and commit history to Heroku.
+
+	git push heroku master
+
+Heroku will install all Python dependencies (requirements.txt) and turn on your web server using the Procfile provided.
+
+#### Open and view your server
+
+	heroku open
