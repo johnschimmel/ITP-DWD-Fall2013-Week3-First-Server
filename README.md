@@ -8,7 +8,7 @@
 -----------
 
 ### Getting the web server to run locally on your computer
-Download example web server and Heroku files (get the ZIP) [https://github.com/johnschimmel/ITP-DWD-Fall2012-Week3-First-Server](https://github.com/johnschimmel/ITP-DWD-Fall2012-Week3-First-Server)
+Download example web server and Heroku files (get the ZIP) [https://github.com/johnschimmel/ITP-DWD-Fall2013-Week3-First-Server](https://github.com/johnschimmel/ITP-DWD-Fall2013-Week3-First-Server)
 
 
 #### Set up local code environment with Virtualenv
@@ -49,7 +49,7 @@ There is a file **requirements.txt** that lists all the packages we need to run 
 
 requirements.txt
 
-	Flask==0.9
+	Flask==0.10
 
 Currently there is only one package requested, Flask version 0.9.
 
