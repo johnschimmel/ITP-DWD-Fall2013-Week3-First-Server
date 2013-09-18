@@ -151,6 +151,27 @@ Ready? Deploy your new server on Heroku by **push**ing your code to Heroku. This
 
 Heroku will install all Python dependencies (requirements.txt) and turn on your web server using the Procfile provided.
 
+#### Errors, Permissions and Keys
+
+If Git is unable to push to Heroku it might be you need to reset your keys with Heroku. This can be accomplished in a few steps.
+
+1) Create a new key on your computer via Terminal with the following command
+
+	ssh-keygen -t rsa
+	
+It will prompt you several time, just press Enter/return to continue through all of them.
+
+2) Next, tell Heroku you have a new key to use, type the following command in Terminal
+
+	heroku keys:add
+	
+Heroku might ask you which key to use, you should selected the # associated with id_rsa.pub
+
+3) Try to repush to Heroku
+
+	git push herkou master
+	
+
 #### Open and view your server
 
 	heroku open
